@@ -1,5 +1,9 @@
-export default function HomePage() {
+
+export default function HomePage({ user, setUser }) {
     return (
-        <h1>HomePage</h1>
+        <>  
+            <h1>Home page</h1>
+        </>
+
     )
 }
