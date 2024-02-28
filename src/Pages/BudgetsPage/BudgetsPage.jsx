@@ -1,5 +1,7 @@
-export default function BudgetsPage() {
+export default function BudgetsPage({ user }) {
     return(
-        <h1>Hello</h1>
+        <>
+            
+        </>
     );
 }

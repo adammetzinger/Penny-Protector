@@ -19,7 +19,7 @@ export default function App() {
       { user ?
           <Routes>
             {/* Route components in here */}
-            <Route path='/Budgets' element={<BudgetsPage />}/>
+            <Route path='/Budgets' element={<BudgetsPage user={user}/>}/>
           </Routes>
           :
           <Routes>
