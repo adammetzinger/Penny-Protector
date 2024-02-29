@@ -28,7 +28,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/budgets" element={<BudgetsPage budgets={budgets} user={user} handleCreateBudget={handleCreateBudget} setBudgets={setBudgets} />}/>
-            <Route path='/budget/:budgetId' element={<BudgetDetailPage />} />
+            <Route path='/budgets/:budgetId' element={<BudgetDetailPage budgets={budgets} />} />
           </Routes>
           :
           <Routes>

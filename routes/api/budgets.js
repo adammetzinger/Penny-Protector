@@ -8,4 +8,6 @@ router.get('/', budgetsCtrl.getAllForUser);
 
 router.post('/', budgetsCtrl.create);
 
+router.get('/:budgetId', budgetsCtrl.getBudget)
+
 module.exports = router;

@@ -1,6 +1,22 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const expenceSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    cost: {
+        type: Number,
+        required: true
+    },
+    comment: {
+        type: String
+    }
+}, {
+    timestamps: true
+});
+
 const budgetSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
@@ -18,7 +34,11 @@ const budgetSchema = new Schema({
     budget: {
         type: Number,
         required: true
-    }
+    },
+    expences: [{
+        type: Schema.Types.ObjectId,
+        ref: expenceSchema
+    }]
 }, {
     timestamps: true,
 });
