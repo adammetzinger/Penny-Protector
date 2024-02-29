@@ -1,7 +1,11 @@
 import sendRequest from "./send-request";
 
-const BASE_URL = '/api/orders';
+const BASE_URL = '/api/budgets';
 
-export function getAllBudgets() {
-    return sendRequest(`${BASE_URL}`);
+export function getAllForUser() {
+    return sendRequest(BASE_URL);
+}
+
+export function createBudget(budgets) {
+    return sendRequest(BASE_URL, 'POST', budgets);
 }

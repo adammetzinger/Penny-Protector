@@ -1,10 +1,11 @@
+import NewBudgetForm from '../../components/BudgetForm/BudgetForm'
 import BudgetList from '../../components/BudgetList/BudgetList'
-import Budgets from '../../../models/budget'
 
-export default function BudgetsPage({ user }) {
+export default function BudgetsPage({ budgets, user, handleCreateBudget, setBudgets }) {
     return(
         <>
-          <BudgetList  budgets={Budgets.filter(budget => budget.user = user)} />  
+          <NewBudgetForm handleCreateBudget={handleCreateBudget} />
+          <BudgetList budgets={budgets} user={user} setBudgets={setBudgets} />
         </>
     );
 }

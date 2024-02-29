@@ -11,7 +11,7 @@ export default function NavBar({ user, setUser }) {
     <nav>
       {user ?
       <>
-        <Link to="/Budgets">New Budgets</Link>
+        <Link to="/budgets">New Budgets</Link>
         &nbsp; | &nbsp;
         <Link to="/">Home</Link>
         &nbsp; | &nbsp;

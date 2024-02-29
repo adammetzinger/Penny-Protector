@@ -6,9 +6,16 @@ import BudgetsPage from '../BudgetsPage/BudgetsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
+import * as budgetsApi from '../../utilities/budgets-api'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [budgets, setBudgets] = useState([]);
+
+  async function handleCreateBudget(newBudget) {
+    const budget = await budgetsApi.createBudget(newBudget);
+    setBudgets([...budgets, budget]);
+  }
 
   return (
     <main className="App">
@@ -19,7 +26,7 @@ export default function App() {
       { user ?
           <Routes>
             {/* Route components in here */}
-            <Route path='/Budgets' element={<BudgetsPage user={user}/>}/>
+            <Route path='/budgets' element={<BudgetsPage budgets={budgets} user={user} handleCreateBudget={handleCreateBudget} setBudgets={setBudgets} />}/>
           </Routes>
           :
           <Routes>
