@@ -6,6 +6,7 @@ import BudgetsPage from '../BudgetsPage/BudgetsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
+import BudgetDetailPage from '../BudgetDetailPage/BudgetDetailPage'
 import * as budgetsApi from '../../utilities/budgets-api'
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/budgets" element={<BudgetsPage budgets={budgets} user={user} handleCreateBudget={handleCreateBudget} setBudgets={setBudgets} />}/>
+            <Route path='/budget/:budgetId' element={<BudgetDetailPage />} />
           </Routes>
           :
           <Routes>
