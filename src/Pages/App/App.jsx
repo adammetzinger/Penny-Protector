@@ -26,7 +26,7 @@ export default function App() {
       { user ?
           <Routes>
             {/* Route components in here */}
-            <Route path='/budgets' element={<BudgetsPage budgets={budgets} user={user} handleCreateBudget={handleCreateBudget} setBudgets={setBudgets} />}/>
+            <Route path="/budgets" element={<BudgetsPage budgets={budgets} user={user} handleCreateBudget={handleCreateBudget} setBudgets={setBudgets} />}/>
           </Routes>
           :
           <Routes>

@@ -1,9 +1,9 @@
 export default function BudgetListItem({ budget }) {
     return (
-        <main>
-            <div>{budget.title}</div>
-            <div>{budget.date}</div>
-            <div>{budget.budget}</div>
+        <main className="BudgetItem">
+            <div>Title: {budget.title}</div>
+            <div>Date for Budget: {budget.date}</div>
+            <div>Budget: {budget.budget}</div>
         </main>
     );
 }

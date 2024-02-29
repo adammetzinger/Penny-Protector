@@ -24,12 +24,14 @@ export default function BudgetForm({ handleCreateBudget }) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <label>Title</label>
             <input 
             name='title'
             value={newBudget.title}
             onChange={handleChange}
             required
             />
+            <label>Date for Budget</label>
             <input 
             name='date'
             value={newBudget.date}
@@ -43,7 +45,7 @@ export default function BudgetForm({ handleCreateBudget }) {
             onChange={handleChange}
             required
             />
-            <button type="Submit">Submit</button>
+            <button type="Submit">Submit New Budget</button>
         </form>
     )
 }
