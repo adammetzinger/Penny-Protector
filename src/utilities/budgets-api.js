@@ -10,6 +10,6 @@ export function createBudget(budgets) {
     return sendRequest(BASE_URL, 'POST', budgets);
 }
 
-export function createExpence(budgetId, expenseData) {
+export function createExpense(budgetId, expenseData) {
     return sendRequest(`${BASE_URL}/${budgetId}/expenses`, 'POST', expenseData);
 }

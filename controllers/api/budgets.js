@@ -4,6 +4,7 @@ module.exports = {
     getAllForUser,
     create,
     getBudget,
+    createExpense,
 };
 
 async function getAllForUser(req, res) {
@@ -20,4 +21,17 @@ async function create(req, res) {
 async function getBudget(req, res) {
     const budget = await Budget.findOne({_id: req.params.budgetId});
     res.json(budget);
+}
+
+async function createExpense(req, res) {
+    try {
+        const budget = await Budget.findOne({_id: req.params.budgetId});
+        if (!budget) return res.status(401).json('Unauthorized');
+        budget.expences.push(req.body);
+        await budget.save();
+        res.json(budget);
+    } catch (err) {
+        console.log(err);
+        res.status(400).json('Create Expense Failed');
+    }
 }

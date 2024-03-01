@@ -35,12 +35,11 @@ const budgetSchema = new Schema({
         type: Number,
         required: true
     },
-    expences: [{
-        type: Schema.Types.ObjectId,
-        ref: expenceSchema
-    }]
+    expences: [expenceSchema],
 }, {
     timestamps: true,
 });
+
+
 
 module.exports = mongoose.model('Budget', budgetSchema);

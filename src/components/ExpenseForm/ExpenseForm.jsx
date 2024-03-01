@@ -1,6 +1,7 @@
 import { useState } from "react"
+import * as budgetsAPI from "../../utilities/budgets-api"
 
-export default function ExpenseForm() {
+export default function ExpenseForm({ budgets, setBudgets, budgetId }) {
     const [newExpense, setNewExpense] = useState({
         title: '',
         cost: '',
@@ -9,20 +10,36 @@ export default function ExpenseForm() {
 
     async function handleSubmit(evt) {
         evt.preventDefault();
-        handleCreateExpence(newExpense);
-        setNewExpense({
-            title: '',
-            cost: '',
-            comment: '',  
-        })
+        const updatedBudget = await budgetsAPI.createExpense(/* expense data, budget._id */budgetId, newExpense)
+        const updatedBudgets = budgets.map(b => b._id === updatedBudget._id ? updatedBudget : b);
+        setBudgets(updatedBudgets);
     }
 
-    function handleCreateExpence(evt) {
-        const formNewExpence = {...newExpense, [evt.target.name]: evt.target.value};
-        setNewExpense(formNewExpence);
+    function handleChange(evt) {
+        const formNewExpense = {...newExpense, [evt.target.name]: evt.target.value};
+        setNewExpense(formNewExpense);
     }
 
     return (
-        <h1>Expence</h1>
+        <form onSubmit={handleSubmit}>
+            <input
+            name="title"
+            value={newExpense.title}
+            onChange={handleChange}
+            />
+            <input
+            name="comment"
+            value={newExpense.comment}
+            onChange={handleChange}
+            />
+            <label>Cost</label>
+            <input
+            name="cost"
+            type="number"
+            value={newExpense.cost}
+            onChange={handleChange}
+            />
+            <button type="Submit">Submit New Budget</button>
+        </form>
     )
 }
