@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
@@ -9,9 +9,18 @@ import AuthPage from '../AuthPage/AuthPage';
 import BudgetDetailPage from '../BudgetDetailPage/BudgetDetailPage'
 import * as budgetsApi from '../../utilities/budgets-api'
 
+
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [budgets, setBudgets] = useState([]);
+
+  useEffect(function() {
+    if (user) {
+      budgetsApi.getAllForUser().then(budgets => setBudgets(budgets));
+    } else {
+      setBudgets([]);
+    }
+  }, [user]);
 
   async function handleCreateBudget(newBudget) {
     const budget = await budgetsApi.createBudget(newBudget);
@@ -28,7 +37,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/budgets" element={<BudgetsPage budgets={budgets} user={user} handleCreateBudget={handleCreateBudget} setBudgets={setBudgets} />}/>
-            <Route path='/budgets/:budgetId' element={<BudgetDetailPage budgets={budgets} />} />
+            <Route path='/budgets/:budgetId' element={<BudgetDetailPage budgets={budgets} setBudgets={setBudgets} />} />
           </Routes>
           :
           <Routes>

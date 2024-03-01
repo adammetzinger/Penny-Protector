@@ -43,6 +43,7 @@ export default function BudgetForm({ handleCreateBudget }) {
             name='budget'
             value={newBudget.budget}
             onChange={handleChange}
+            type="number"
             required
             />
             <button type="Submit">Submit New Budget</button>
