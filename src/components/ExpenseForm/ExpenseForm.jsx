@@ -1,7 +1,7 @@
 import { useState } from "react"
-import * as budgetsAPI from "../../utilities/budgets-api"
+import * as expensesAPI from "../../utilities/expenses-api"
 
-export default function ExpenseForm({ budgets, setBudgets, budgetId }) {
+export default function ExpenseForm({ budgets, setBudgets, budgetId}) {
     const [newExpense, setNewExpense] = useState({
         title: '',
         cost: '',
@@ -10,9 +10,14 @@ export default function ExpenseForm({ budgets, setBudgets, budgetId }) {
 
     async function handleSubmit(evt) {
         evt.preventDefault();
-        const updatedBudget = await budgetsAPI.createExpense(/* expense data, budget._id */budgetId, newExpense)
+        const updatedBudget = await expensesAPI.createExpense(/* expense data, budget._id */budgetId, newExpense);
         const updatedBudgets = budgets.map(b => b._id === updatedBudget._id ? updatedBudget : b);
         setBudgets(updatedBudgets);
+        setNewExpense({
+            title: '',
+            cost: '',
+            comment: '',
+        });
     }
 
     function handleChange(evt) {

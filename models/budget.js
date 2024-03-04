@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const expenceSchema = new Schema({
+const expenseSchema = new Schema({
     title: {
         type: String,
         required: true
@@ -35,7 +35,7 @@ const budgetSchema = new Schema({
         type: Number,
         required: true
     },
-    expences: [expenceSchema],
+    expenses: [expenseSchema],
 }, {
     timestamps: true,
 });
