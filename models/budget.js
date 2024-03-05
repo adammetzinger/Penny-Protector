@@ -40,6 +40,8 @@ const budgetSchema = new Schema({
     timestamps: true,
 });
 
-
+budgetSchema.virtual('budgetLeft').get(function() {
+    return this.expenses.reduce((total, expense) => {total += expense.cost}, 0);
+});
 
 module.exports = mongoose.model('Budget', budgetSchema);

@@ -27,17 +27,19 @@ export default function ExpenseForm({ budgets, setBudgets, budgetId}) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <label>Title:</label>
             <input
             name="title"
             value={newExpense.title}
             onChange={handleChange}
             />
+            <label>Comment:</label>
             <input
             name="comment"
             value={newExpense.comment}
             onChange={handleChange}
             />
-            <label>Cost</label>
+            <label>Cost:</label>
             <input
             name="cost"
             type="number"

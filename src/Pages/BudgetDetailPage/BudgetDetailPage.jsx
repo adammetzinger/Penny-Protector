@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import * as budgetsAPI from "../../utilities/budgets-api"
+import './BudgetDetailPage.css';
 import ExpenseForm from "../../components/ExpenseForm/ExpenseForm"
 import ExpenseItem from "../../components/ExpenseItem/ExpenseItem";
 
@@ -13,12 +13,17 @@ export default function BudgetDetailPage({ budgets, setBudgets }) {
     const expense = budget.expenses.map(e => 
         <ExpenseItem expense={e} budgetId={budgetId} budgets={budgets} setBudgets={setBudgets} />
     )
+
+    const totalExpense = budget.expenses.reduce((total, expense) => {
+        return total + expense.cost
+    }, 0)
     
     return (
         <>
             <h1>{budget.title}</h1>
             <h1>{budget.date}</h1>
             <h1>{budget.budget}</h1>
+            <h1>{totalExpense}</h1>
             <ExpenseForm 
             budgets={budgets} 
             setBudgets={setBudgets} 

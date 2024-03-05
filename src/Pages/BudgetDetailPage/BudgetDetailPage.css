@@ -1,0 +1,19 @@
+.BudgetForm {
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.BudgetForm > input {
+    width: 250px;
+}
+
+.BudgetForm > button {
+    width: 100%;
+}
+
+.BudgetForm > label {
+    display:block;
+    width: 250;
+    text-align: right;
+    margin-top: 5%;
+}
