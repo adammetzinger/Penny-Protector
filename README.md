@@ -28,6 +28,9 @@ Penny Protector is a budget building app that allows you to add expenses. Calicu
 
 # Getting Started With Penny Protector
 
+[Click to use Penny Protector](https://penny-protector-8e7005bbc4ed.herokuapp.com/)
 
+[Click to view Project Planing](https://trello.com/b/R0Hzl5F9/penny-protector)
 
 # Next Steps and Future Additions
+
