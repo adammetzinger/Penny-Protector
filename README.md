@@ -7,6 +7,17 @@ Penny Protector is a budget building app that allows you to add expenses. Calicu
     |:-------------:| -----------|
     | Login page | ![](/readmePictures/SignUpPage.png) |
 
+  |   Description | Screenshot | 
+  |:-------------:| -----------|
+  | <h3>Feed Page</h3> | <img
+    src="https://github.com/amarpan/meet-your-classmates/blob/main/public/Screenshots/FeedPage.png?raw=true"
+    width="700"
+  /> |
+  | <h3 align="center">Profile Page</h3> | <img
+  src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.png"
+  width="700"
+  /> |
+
 # Technologies Used
 
 ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb)
