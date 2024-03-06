@@ -1,9 +1,9 @@
-.BudgetForm {
+.ExpenseForm, .BudgetForm {
     margin-top: 10px;
     margin-left: auto;
 }
 
-.BudgetForm > input {
+.ExpenseForm > input, .BudgetForm > input {
     width: 250px;
 }
 
@@ -12,9 +12,15 @@
     margin: auto;
 }
 
-.BudgetForm > label {
+.ExpenseForm > button {
+    width: 300px;
+    margin: auto;
+}
+
+.ExpenseForm > label, .BudgetForm > label {
     display:block;
     width: 250;
     text-align: right;
     margin: auto 0;
 }
+

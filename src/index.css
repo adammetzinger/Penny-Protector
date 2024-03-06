@@ -5,6 +5,7 @@
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
   --tan-4: #F5EAD0;
+  --purple-light: #7700f656;
   --purple: #7700f6;
   --text-light: #968c84;
   --text-dark: #615954;
@@ -144,7 +145,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--purple-light);
 }
 
 button[type="submit"] {
@@ -153,6 +154,6 @@ button[type="submit"] {
 }
 
 .AuthForm {
-  width: 400px;
+  width: 500px;
   margin: auto;
 }

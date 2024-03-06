@@ -26,7 +26,7 @@ export default function ExpenseForm({ budgets, setBudgets, budgetId}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="ExpenseForm" onSubmit={handleSubmit}>
             <label>Title:</label>
             <input
             name="title"

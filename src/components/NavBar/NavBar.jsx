@@ -22,7 +22,11 @@ export default function NavBar({ user, setUser }) {
         <Link to="" onClick={handleLogOut}>Log Out</Link>
       </>
       :
-      <Link to="/auth">Log In/ SignUp</Link>
+      <>
+        <Link to="/">Home</Link>
+        &nbsp; | &nbsp;
+        <Link to="/auth">Log In/ SignUp</Link>
+      </>
       }
     </nav>
   );

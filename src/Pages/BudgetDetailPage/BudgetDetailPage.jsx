@@ -20,10 +20,10 @@ export default function BudgetDetailPage({ budgets, setBudgets }) {
     
     return (
         <>
-            <h1>{budget.title}</h1>
-            <h1>{budget.date}</h1>
-            <h1>{budget.budget}</h1>
-            <h1>{totalExpense}</h1>
+            <h1>Title: {budget.title}</h1>
+            <h1>Date of Budget: {budget.date}</h1>
+            <h1>Budget: {budget.budget}</h1>
+            <h1>Total Expenses: {totalExpense}</h1>
             <ExpenseForm 
             budgets={budgets} 
             setBudgets={setBudgets} 

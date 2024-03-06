@@ -15,7 +15,7 @@ export default function BudgetListItem({ budget }) {
                 <div>Title: {budget.title}</div>
                 <div>Date for Budget: {budget.date}</div>
                 <div>Budget: {budget.budget}</div>
-                <div>Total Allocated: {totalExpense}</div>
+                <div>Total Expenses: {totalExpense}</div>
                 <div>Total Budget Left: {budgetLeft}</div>
             </main>
         </Link>
