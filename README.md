@@ -2,21 +2,13 @@
 Penny Protector is a budget building app that allows you to add expenses. Caliculate the remaining of the budget using all the expenses you have added.
 
 # Screen Shots
+|   Description | Screenshot | 
+|:-------------:|:-------------:|
+| SignUp Form | <img src="readmePictures/SignUpPage.png" alt="drawing" style="width:400px;"/>|
+| Budget Display and Create | <img src="readmePictures/BudgetPage.png" alt="drawing" style="width:400px;"/>|
+| Budget Display and Create | <img src="readmePictures/ExpensePage.png" alt="drawing" style="width:400px;"/>|
 
-    |   Description | Screenshot | 
-    |:-------------:| -----------|
-    | Login page | ![](/readmePictures/SignUpPage.png) |
 
-  |   Description | Screenshot | 
-  |:-------------:| -----------|
-  | <h3>Feed Page</h3> | <img
-    src="https://i.imgur.com/PrDaOtG.png"
-    width="700"
-  /> |
-  | <h3 align="center">Profile Page</h3> | <img
-  src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.png"
-  width="700"
-  /> |
 
 # Technologies Used
 
@@ -35,5 +27,7 @@ Penny Protector is a budget building app that allows you to add expenses. Calicu
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
 # Getting Started With Penny Protector
+
+
 
 # Next Steps and Future Additions
